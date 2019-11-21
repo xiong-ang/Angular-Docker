@@ -27,6 +27,6 @@ jobs:
         # The login username for the registry
         username: BarretCR
         # The login password for the registry
-        password: AM0xLcDvqorXmYw+FVLEHCTN9oLiSomZ
+        password: ${{ secrets.Azure_Password }}
         # Use registry for pushing to a custom registry
         registry: barretcr.azurecr.io
