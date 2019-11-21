@@ -18,4 +18,15 @@ jobs:
     - run: npm install
     - run: npm install -g @angular/cli
     - run: npm run build:docker
-    - run: npm test
+      
+    - name: Publish Docker
+      uses: elgohr/Publish-Docker-Github-Action@2.8
+      with:
+        # The name of the image you would like to push
+        name: angular-docker-nginx
+        # The login username for the registry
+        username: BarretCR
+        # The login password for the registry
+        password: AM0xLcDvqorXmYw+FVLEHCTN9oLiSomZ
+        # Use registry for pushing to a custom registry
+        registry: barretcr.azurecr.io
