@@ -1,0 +1,21 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      
+    - name: setup-docker
+      uses: docker-practice/actions-setup-docker@0.0.1
+  
+    - run: npm install
+    - run: npm install -g @angular/cli
+    - run: npm run build:docker
+    - run: npm test
