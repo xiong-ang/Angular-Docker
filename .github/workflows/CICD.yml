@@ -20,7 +20,7 @@ jobs:
     - run: npm run build:docker
       
     - name: Publish Docker
-      uses: elgohr/Publish-Docker-Github-Action@2.8
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         # The name of the image you would like to push
         name: angular-docker-nginx
